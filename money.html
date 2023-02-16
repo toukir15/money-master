@@ -5,6 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Money Master</title>
+    <!-- tailwind link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome link  -->
+    <script
+      src="https://kit.fontawesome.com/39749765a9.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <!-- header section  -->
+    <header>
+      <h1 class="text-5xl font-bold text-center my-12 text-purple-600">
+        Money Master <i class="fa-solid fa-sack-dollar text-green-600"></i>
+      </h1>
+    </header>
+
+    <!-- main section  -->
+    <main>
+      <section class="grid grid-cols-2 gap-12">
+        <!-- money master img  -->
+        <div class="w-full h-full bg-contain">
+          <img
+            class="h-full"
+            src="wealthy-african-man-throwing-away-his-money.jpg"
+            alt=""
+          />
+        </div>
+
+        <!-- money master calculation  -->
+        <div class="flex flex-col items-center bg-[#F8F8F8]">
+          <h5 class="mb-4 text-center font-bold mt-10">Income</h5>
+          <div>
+            <fieldset class="flex justify-end mb-4">
+              <p class="mr-2 flex items-center">Income:</p>
+              <input id="income__input" class="p-1 bg-[#DCDCDC]" type="text" />
+            </fieldset>
+            <h5 class="mb-4 text-center font-bold">Expenses</h5>
+            <fieldset class="flex justify-end mb-4">
+              <p class="mr-2 flex items-center">Food:</p>
+              <input id="food__input" class="p-1 bg-[#DCDCDC]" type="text" />
+            </fieldset>
+            <fieldset class="flex justify-end mb-4">
+              <p class="mr-2 flex items-center">Rent:</p>
+              <input id="rent__input" class="p-1 bg-[#DCDCDC]" type="text" />
+            </fieldset>
+            <fieldset class="flex justify-end mb-4">
+              <p class="mr-2 flex items-center">Clothes:</p>
+              <input id="clothes__input" class="p-1 bg-[#DCDCDC]" type="text" />
+            </fieldset>
+
+            <div class="flex justify-center">
+              <button
+                id="calculate__btn"
+                class="bg-purple-600 text-white py-2 px-16 font-bold mb-2 rounded"
+              >
+                Calculate
+              </button>
+            </div>
+
+            <h5 class="mb-4 text-center font-bold">
+              Total Expenses: <span id="total__expenses">00</span>
+            </h5>
+            <h5 class="mb-4 text-center font-bold">
+              balance: <span id="balance">00</span>
+            </h5>
+            <fieldset class="flex justify-center items-center mb-4">
+              <p class="mr-2 flex items-center">Save:</p>
+              <input
+                id="save__input"
+                class="py-2 px-12 w-16 bg-[#DCDCDC]"
+                type="text"
+              />
+              <span class="mx-2 flex items-center">%</span>
+              <button
+                id="save__btn"
+                class="bg-purple-600 text-white py-2 px-12 font-bold rounded"
+              >
+                Save
+              </button>
+            </fieldset>
+
+            <h5 class="mb-4 text-center font-bold">
+              Saving Amount: <span id="saving__amount">00</span>
+            </h5>
+            <h5 class="mb-4 text-center font-bold">
+              Remaining Balance: <span id="remaining__balance">00</span>
+            </h5>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/js/money.js"></script>
+  </body>
 </html>
